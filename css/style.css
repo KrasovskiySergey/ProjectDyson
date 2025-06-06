@@ -3,13 +3,15 @@
 @import "header.css";
 
 .main__banner {
-    background: url(../img/baner.png);
+    background: #dddd;
+    min-height: 400px;
+    max-height: 850px;
+    overflow: hidden; 
 }
 
 .banner__inner {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 87px;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
@@ -28,6 +30,7 @@
     margin-bottom: 40px;
 }
 
+
 .banner__text {
     font-family: var(--font-family);
     font-weight: 400;
@@ -36,6 +39,7 @@
     color: var(--title-text);
     padding-bottom: 90px;
 }
+
 
 .banner__button {
     font-family: var(--font-family);
@@ -47,7 +51,6 @@
     background: #c5358c;
     transition: all 0.3s ease;
 }
-
 .banner__button:hover {
     background: #a82d7a;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -59,10 +62,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.banner__img {
-    width: 997px;
-}
 
 .banner__img img {
-    max-width: 100%;
+    max-width: 150%;
 }
