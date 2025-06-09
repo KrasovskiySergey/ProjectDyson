@@ -10,18 +10,73 @@
     align-items: center;
 }
 
+.burger {
+    display: none;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+
+.burger span,
+.burger span::before,
+.burger span::after {
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 100px;
+    background: var(--main-bg);
+    transition: all .3s;
+}
+
+.burger span {
+    position: relative;
+}
+
+.burger span::before,
+.burger span::after {
+    content: '';
+    position: absolute;
+}
+
+.burger span::before {
+    top: -8px;
+}
+
+.burger span::after {
+    bottom: -8px;
+}
+
+.body--opened-menu .burger{
+    overflow: hidden;
+}
+.body--opened-menu .burger span{
+    background: transparent;
+}
+.body--opened-menu .burger span::before {
+    top: 0px;
+    transform: rotate(45deg);
+}
+.body--opened-menu .burger span::after {
+    bottom: 0px;
+    transform: rotate(-45deg);
+}
+
 .header__logo {
     max-width: 100%;
     padding: 6px 0 7px;
+    z-index: 2;
 }
 
 .nav__list {
     font-family: var(--second-family);
     font-weight: 400;
     font-size: 20px;
-    color: #fff;
+    color: var(--main-bg);
     display: flex;
-    gap: 30px;
+    gap: 7vh 30px;
 }
 
 .nav__item {
@@ -34,6 +89,7 @@
 .header__basket {
     position: relative;
     display: inline-block;
+    z-index: 2;
 }
 .header__basket path {
     transition: stroke .3s;
@@ -47,7 +103,7 @@
     position: absolute;
     top: 15px;
     left: 35px;
-    background-color: #fff;
+    background-color: var(--main-bg);
     color: #000;
     border-radius: 50%;
     width: 19px;
