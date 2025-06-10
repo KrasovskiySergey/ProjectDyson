@@ -102,7 +102,7 @@
 .header__basket-counter {
     position: absolute;
     top: 15px;
-    left: 35px;
+    left: 32px;
     background-color: var(--main-bg);
     color: #000;
     border-radius: 50%;

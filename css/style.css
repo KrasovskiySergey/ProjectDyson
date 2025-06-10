@@ -4,12 +4,13 @@
 
 .main__banner {
     background: #dddd;
-    max-height: 850px; 
+    min-height: 392px; 
 }
 
 .banner__inner {
     display: flex;
     gap: 87px;
+    position: relative;
 }
 
 .banner__info {
@@ -37,8 +38,8 @@
     font-size: 21px;
     line-height: 1.03;
     color: var(--title-text);
-    padding-bottom: 90px;
-    max-width: 80%;
+    margin-bottom: 90px;
+    max-width: 85%;
 }
 
 
@@ -63,7 +64,11 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.banner__img {
+    position: relative;
+    right: 0px;
+}
 
 .banner__img img {
-    max-width: 107%;
+    max-width: 100%;
 }
