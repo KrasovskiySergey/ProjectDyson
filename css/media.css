@@ -3,29 +3,8 @@
         padding: 0 30px;
     }
 
-    .nav {
-        position: fixed;
-        inset: 0;
-        padding: 20vh 15px 30px;
-        background: #111;
-
-        transform: translateY(-50%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all .3s ease;
-
-    }
-
-    .nav__list {
-        flex-direction: column;
-        align-items: center;
-        font-size: 25px;
-    }
-
-    .burger {
-        display: flex;
-        width: 40px;
-        height: 40px;
+    .header__inner {
+        height: 76px;
     }
 
     .header__logo img {
@@ -54,19 +33,14 @@
 
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
     .container {
-        padding: 0 70px;
+        padding: 0 30px;
     }
-
-    .header__inner {
-        height: 76px;
+    .nav__list {
+        font-size: 15px;
+        gap: 7vh 10px;
     }
-
-    .header__logo {}
-
-    .header__logo img {}
-
     .banner__title {
         font-size: 32px;
         width: 425px;
@@ -74,7 +48,7 @@
     }
 
     .banner__text {
-        font-size: 14px;
+        font-size: 18px;
         margin-bottom: 70px;
     }
 
@@ -85,6 +59,30 @@
 }
 
 @media (max-width: 950px) {
+    .nav {
+        position: fixed;
+        inset: 0;
+        padding: 20vh 15px 30px;
+        background: #111;
+
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease;
+
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        font-size: 25px;
+    }
+
+    .burger {
+        display: flex;
+        width: 40px;
+        height: 40px;
+    }
     .banner__title {
         font-size: 27px;
         width: 363px;

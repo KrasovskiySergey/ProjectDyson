@@ -9,7 +9,7 @@
         const burgerNavLink = e.target.closest('.nav__link')
 
         if (!burgerIcon && !burgerNavLink) return
-        if (document.documentElement.clientWidth > 1450) return
+        if (document.documentElement.clientWidth > 1200) return
 
         
 
