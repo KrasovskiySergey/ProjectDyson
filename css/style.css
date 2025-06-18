@@ -93,14 +93,14 @@
 
 .section__grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
     gap: 20px;
 }
 
 .section__item {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 41px 22px #0000000d;
+    box-shadow: 0 4px 20px 0 #0000000d;
 }
 
 .section__item-container {
@@ -163,15 +163,9 @@
 }
 
 .section__item-menu:hover .section__item-link path {
-    fill: #fff; 
+    fill: #fff;
 }
 
 /* Адаптация */
 
 
-@media (max-width: 480px) {
-    .section__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
