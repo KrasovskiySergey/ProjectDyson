@@ -81,8 +81,8 @@
 
 
 .main__section {
-    padding: 30px 0;
     background-color: #fff;
+    padding: 150px 0;
 }
 
 .container {
@@ -95,6 +95,7 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(120px, 1fr));
     gap: 20px;
+
 }
 
 .section__item {
@@ -166,6 +167,62 @@
     fill: #fff;
 }
 
-/* Адаптация */
+
+/* --------------------------------------------------- */
+.main__expert-opinion {
+    background: #f8f8f8;
+    max-height: 825px;
+}
+.expert-opinion__wrapper {
+    display: grid;
+    grid-template-areas:
+        "title image"
+        "text image";
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 0px;
+}
+
+.expert-opinion__wrapper h3 {
+    grid-area: title;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 38px;
+    color: #111;
+    margin-top: 150px;
+    width: clamp(280px, 65vw, 740px);
+    position: relative;
+    z-index: 1;
+}
 
 
+.expert-opinion__text {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 162px;
+    width: clamp(280px, 65vw, 670px);
+    height: 39.2vh;
+}
+
+.expert-opinion__text p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(15px, 1.8vw, 18px);
+    line-height: 1.4;
+    color: #000;
+}
+
+.expert-opinion__image {
+    grid-area: image;
+    position: relative;
+    margin-top: 130px;
+    right: 65px;
+    z-index: 0;
+}
+
+.expert-opinion__image img {
+    width: clamp(15px, 46vw, 700px);
+}
+
+/* Адаптация для десктопов */
