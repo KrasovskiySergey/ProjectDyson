@@ -281,19 +281,31 @@
         box-shadow: 0px 1px 10px 8px #0404040d;
         background: #fff;
     }
+}
 
-    @media (max-width: 470px) {
-        .banner__img {
-            right: -19px;
-            top: 127px;
-        }
-
-        .banner__img img {
-            width: 232px;
-            height: 265px;
-        }
-
-        .section__grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
+@media (max-width: 470px) {
+    .banner__img {
+        right: -19px;
+        top: 127px;
     }
+
+    .banner__img img {
+        width: 232px;
+        height: 265px;
+    }
+
+    .section__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .active-only__wrapper {
+        gap: 14px;
+        padding: 46px 0;
+    }
+
+
+    .expert-opinion__wrapper h2 {
+        margin-top: 46px;
+        font-size: 17px;
+    }
+}
