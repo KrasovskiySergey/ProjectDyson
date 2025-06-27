@@ -116,6 +116,12 @@
         gap: 15px;
     }
 
+    /* ---------------------------------- */
+
+    .advantages__container {
+        padding: 18px 0 30px;
+    }
+
 }
 
 @media (max-width: 875px) {
@@ -184,6 +190,23 @@
     .expert-opinion__image {
         display: none;
     }
+
+    .main__active-only {
+        display: block;
+    }
+
+    /* ------------------------------------------- */
+    .advantages__content {
+        padding: 80px 0;
+    }
+
+    .advantages__content h2 {
+        margin-bottom: 40px;
+    }
+
+    .advantages__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -231,10 +254,20 @@
         margin-bottom: 30px;
     }
 
-    .main__active-only {
-        display: block;
+    /* --------------------------------- */
+
+    .advantages__content {
+        padding: 60px 0;
     }
 
+    .advantages__container {
+        padding: 18px 0 30px;
+        gap: 11px;
+    }
+
+    .advantages__description {
+        gap: 8px;
+    }
 }
 
 @media (max-width: 680px) {
@@ -281,6 +314,16 @@
         box-shadow: 0px 1px 10px 8px #0404040d;
         background: #fff;
     }
+
+    /* --------------------------------- */
+
+    .advantages__grid {
+        gap: 15px;
+    }
+
+    .advantages__container {
+        padding: 10px 0 25px;
+    }
 }
 
 @media (max-width: 470px) {
@@ -307,5 +350,45 @@
     .expert-opinion__wrapper h2 {
         margin-top: 46px;
         font-size: 17px;
+    }
+
+    /* ----------------------------------------- */
+    .advantages__content {
+        padding: 46px 0;
+    }
+
+
+    .advantages__content h2 {
+        margin-bottom: 36px;
+    }
+
+    
+    .advantages__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .advantages__container {
+        display: flex;
+        gap: 9vw;
+        flex-direction: row;
+    }
+
+    .advantages__img {
+        margin-left: 33px;
+    }
+
+    .advantages__description {
+        display: flex;
+        gap: 8px;
+        padding: 10px 10px 0 0;
+        align-items: flex-start;
+    }
+
+    .advantages__description-title {
+        text-align: start;
+    }
+
+    .advantages__description-text {
+        text-align: start;
     }
 }
