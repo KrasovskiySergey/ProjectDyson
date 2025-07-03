@@ -12,3 +12,5 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
         updateBasketCounter(currentCount + 1);
     });
 });
+
+
