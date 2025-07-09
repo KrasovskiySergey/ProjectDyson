@@ -107,6 +107,7 @@
 }
 
 .header__basket-counter {
+    display: none;
     position: absolute;
     top: 15px;
     left: 32px;

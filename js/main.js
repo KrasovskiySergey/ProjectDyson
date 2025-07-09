@@ -5,7 +5,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Корзина всегда пустая при загрузке
     let basketItems = [];
     let totalCount = 0;
-    basketCounter.textContent = totalCount;
+    
+    // Инициализация счётчика (скрываем если пусто)
+    updateBasketCounter();
+
+    // Функция обновления счётчика
+    function updateBasketCounter() {
+        basketCounter.textContent = totalCount;
+        
+        // Показываем или скрываем счётчик
+        if (totalCount > 0) {
+            basketCounter.style.display = 'flex'; // или 'block' в зависимости от ваших стилей
+        } else {
+            basketCounter.style.display = 'none';
+        }
+        
+        // Анимация при изменении
+        if (totalCount > 0) {
+            basketCounter.classList.add('animate');
+            setTimeout(() => basketCounter.classList.remove('animate'), 300);
+        }
+    }
 
     // Обработчики для товаров
     document.querySelectorAll('.category__product-card').forEach(card => {
@@ -51,36 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Обновляем счётчик
             totalCount += quantity;
-            basketCounter.textContent = totalCount;
-            basketCounter.classList.add('animate');
-            setTimeout(() => basketCounter.classList.remove('animate'), 300);
+            updateBasketCounter();
 
             // Сбрасываем количество
             quantity = 1;
             quantityEl.textContent = quantity;
             
-            alert(`Добавлено ${product.quantity} ${product.name} в корзину`);
         });
-    });
-
-    // Показ корзины (только текущей сессии)
-    document.querySelector('.header__basket').addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        if (basketItems.length === 0) {
-            alert('Корзина пуста');
-            return;
-        }
-        
-        let message = 'Ваша корзина (будет очищена при обновлении):\n';
-        let total = 0;
-        
-        basketItems.forEach(item => {
-            message += `- ${item.name}: ${item.quantity} × ${item.price.toLocaleString()} ₽\n`;
-            total += item.price * item.quantity;
-        });
-        
-        message += `\nИтого: ${total.toLocaleString()} ₽`;
-        alert(message);
     });
 });
