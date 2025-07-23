@@ -1,25 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Элементы корзины
     const basketCounter = document.querySelector('.header__basket-counter');
-    
+
     // Корзина всегда пустая при загрузке
     let basketItems = [];
     let totalCount = 0;
-    
+
     // Инициализация счётчика (скрываем если пусто)
     updateBasketCounter();
 
     // Функция обновления счётчика
     function updateBasketCounter() {
         basketCounter.textContent = totalCount;
-        
+
         // Показываем или скрываем счётчик
         if (totalCount > 0) {
             basketCounter.style.display = 'flex'; // или 'block' в зависимости от ваших стилей
         } else {
             basketCounter.style.display = 'none';
         }
-        
+
         // Анимация при изменении
         if (totalCount > 0) {
             basketCounter.classList.add('animate');
@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Сбрасываем количество
             quantity = 1;
             quantityEl.textContent = quantity;
-            
+
         });
     });
 });
+

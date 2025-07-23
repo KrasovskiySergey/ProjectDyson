@@ -34,9 +34,9 @@
 }
 
 @media (max-width: 1250px) {
-    .container {
+    /* .container {
         padding: 0 30px;
-    }
+    } */
 
     .nav__list {
         font-size: 15px;
