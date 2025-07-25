@@ -111,7 +111,7 @@
     padding: 30px;
     flex-direction: column;
     gap: 1vh;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
 .section__item-menu p {
@@ -127,7 +127,7 @@
     font-size: clamp(11px, 2vw, 24px);
     display: flex;
     align-items: center;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     gap: 20px;
 }
 
@@ -140,9 +140,9 @@
 
 /* Эффекты при наведении */
 .section__item-menu:hover {
-    transform: translateY(-3px);
+    transform: translateY(3px);
     background: #111;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
 }
 
 .section__item-menu:hover p {
@@ -353,7 +353,7 @@ h6 {
     font-size: clamp(1.25rem, 0.576rem + 2.766vw, 2.875rem);
     line-height: 1.1;
     color: #111;
-    padding: clamp(60px, 9.8vw, 150px) 0 50px;
+    padding: clamp(60px, 9.8vw, 150px) 0 clamp(20px, 3.8vw, 50px);
 }
 
 .count {
@@ -371,7 +371,7 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin-bottom: 130px;
+    margin-bottom: clamp(85px, 9.5vw, 130px);
     max-width: 89%;
 }
 
@@ -408,7 +408,6 @@ h6 {
 
 .category__sorting {
     position: absolute;
-    width: clamp(191px, 19.7vw, 273px);
     font-family: var(--font-family);
     z-index: 100;
     right: 0;
@@ -423,12 +422,12 @@ h6 {
 .sorting-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
+    justify-content: space-around;
+    width: clamp(11.938rem, 14.386vw + 5.104rem, 17.063rem);
+    height: clamp(1.875rem, 1.754vw + 1.042rem, 2.5rem);
     border: 1px solid #c5358c;
     border-radius: 3px;
     cursor: pointer;
-    margin-bottom: 40px;
 }
 
 .sorting-header h3 {
@@ -450,10 +449,6 @@ h6 {
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -518,7 +513,7 @@ h6 {
 /* -----------------Products--------------------------- */
 .swiper {
     width: 100%;
-    margin-bottom: clamp(30px, 8.9vw, 130px);
+    margin-bottom: clamp(1.875rem, 12.821vw - 2.532rem, 8.125rem);
 }
 
 .category__products-grid {
@@ -534,20 +529,18 @@ h6 {
     width: 440px;
     gap: 40px;
     max-width: 100%;
-    box-shadow: 0 2px 20px #0000001a;
+    box-shadow: 0 2px 10px #0000001a;
 
 }
 
 .category__product-title {
     font-family: var(--font-family);
     font-weight: 300;
-    font-size: clamp(0.625rem, -0.485rem + 2.313vw, 1.438rem);;
+    font-size: clamp(0.625rem, -0.485rem + 2.313vw, 1.438rem);
+    ;
     color: #111;
-    width: 360px;
-    height: clamp(48px, 6.1vw, 69px);
-    max-width: 89%;
-    max-height: 100%;
-
+    height: clamp(39px, 5.1vw, 69px);
+    max-width: 90%;
     padding-left: clamp(10px, 3vw, 40px);
 }
 
@@ -574,13 +567,16 @@ h6 {
 
 
 .category__product-discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 44px;
     background: #c5358c;
     color: #ffffff;
-    padding:
-    clamp(4px, 1vw, 12px) clamp(10px, 2.1vw, 28px);
     border-radius: 3px;
+    width: clamp(3.5rem, 10.142vw - 1.368rem, 7.063rem);
+    height: clamp(1.25rem, 4.982vw - 1.141rem, 3rem);
 
     font-family: var(--font-family);
     font-weight: 400;
@@ -680,12 +676,22 @@ h6 {
     height: clamp(2.25rem, 1.5239rem + 2.9787vw, 4rem);
     background: transparent;
     flex-shrink: 0;
-    
 }
 
 .category__prev svg,
 .category__next svg {
     width: clamp(21px, 3vw, 31px);
+    transition: fill 0.3s;
+}
+
+.category__prev:hover,
+.category__next:hover {
+    border-color: #c5358c; 
+}
+
+.category__prev:hover svg path,
+.category__next:hover svg path {
+    fill: #c5358c;
 }
 
 .category__pagination {
@@ -694,3 +700,4 @@ h6 {
     font-size: clamp(0.9375rem, 0.7041rem + 0.9574vw, 1.5rem);
     color: #111;
 }
+
