@@ -236,6 +236,17 @@
     .category__product-price-old {
         right: 25px;
     }
+
+
+
+
+    /* -------------------footer------------------------ */
+    .footer__company-none {
+        display: none;
+    }
+    .footer__company-active {
+        display: block;
+    }
 }
 
 
@@ -424,6 +435,22 @@
 
     .category__products-grid {
         grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+
+
+
+
+    /* --------------FOOTER-------------------- */
+    .footer__col-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__col-position {
+        position: relative;
+        top: -25px;
+    }
+    .footer__col-tel{
+        margin-bottom: 0px;
     }
 }
 
