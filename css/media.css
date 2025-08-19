@@ -70,6 +70,9 @@
     .category__product-card {
         gap: 30px;
     }
+    .review__user-text {
+        width: 90%;
+    }
 }
 
 @media (max-width: 950px) {
@@ -360,6 +363,17 @@
     .category__nav {
         gap: 15px;
     }
+
+    /* ----------------------ОТЗЫВЫ----------------------------------- */
+
+    .review__write-review {
+        padding: 10px 37px;
+    }
+
+    .review__user-text {
+        width: 80%;
+    }
+
 }
 
 @media (max-width: 680px) {
@@ -437,7 +451,23 @@
         grid-template-columns: repeat(2, minmax(120px, 1fr));
     }
 
+    /* -----------------ОТЗЫВЫ----------------------- */
+    .review__rating {
+        justify-content: space-between;
+    }
 
+    .review {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .review__user-text {
+        width: 100%;
+    }
+
+    .divider {
+        margin: 20px 0;
+    }
 
 
     /* --------------FOOTER-------------------- */
@@ -528,5 +558,19 @@
 
     .category__products-grid {
         gap: 10px;
+    }
+
+    /* -----------ОТЗЫВЫ------------- */
+
+    .review__write-review {
+        padding: 10px 20px;
+    }
+
+    .review__user-photo {
+        gap: 10px;
+    }
+
+    .review__user-photo img {
+        width: 80px;
     }
 }

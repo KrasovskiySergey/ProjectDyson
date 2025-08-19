@@ -708,14 +708,12 @@ h6 {
     margin: clamp(60px, 9.8vw, 150px) 0;
 }
 
-.container {}
 
 .reviews__title {
-    
     margin-bottom: 20px;
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: 42px;
+    font-size: clamp(1.25rem, 0.6607rem + 2.4176vw, 2.625rem);
     color: #111;
 }
 
@@ -723,7 +721,6 @@ h6 {
     display: flex;
     align-items: flex-end;
     gap: 70px;
-    margin-bottom: 10px;
 }
 
 .review__rating-info {}
@@ -731,14 +728,18 @@ h6 {
 .review__score {
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 30px;
+    font-size: clamp(1rem, -0.1546rem + 2.4055vw, 1.875rem);
     color: #111;
     margin-bottom: 10px;
 }
 
 .review__score span {
     font-weight: 400;
-    font-size: 20px;
+    font-size: clamp(0.75rem, 0.0902rem + 1.3746vw, 1.25rem);
+}
+
+.review__img-stars {
+    width: clamp(80px, 12vw, 161px);
 }
 
 .review__write-review {
@@ -747,7 +748,7 @@ h6 {
     padding: 15.5px 41px;
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 24px;
+    font-size: clamp(1rem, 0.3402rem + 1.3746vw, 1.5rem);
     color: #111;
 }
 
@@ -772,7 +773,7 @@ h6 {
 .review__user-title {
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 20px;
+    font-size: clamp(0.75rem, 0.5469rem + 0.8333vw, 1.25rem);
     line-height: 1.5;
     color: #111;
 }
@@ -792,17 +793,18 @@ h6 {
 .review__user-text {
     font-family: var(--font-family);
     font-weight: 300;
-    font-size: 18px;
+    font-size: clamp(0.75rem, 0.5977rem + 0.625vw, 1.125rem);
     line-height: 1.4;
     color: #111;
+    max-width: 783px;
+    width: 100%;
     margin-bottom: 15px;
 }
 
-.width-text {
-    width: 70%;
-}
 
 .review__user-photo {
+    display: flex;
+    gap: 20px;
     border-radius: 3px;
     margin-bottom: 10px;
 }
@@ -810,7 +812,7 @@ h6 {
 .review__view-photos {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(0.75rem, 0.2537rem + 1.0327vw, 1.125rem);
     color: #c5358c;
     text-decoration: underline;
     text-underline-offset: 5px;
@@ -819,7 +821,7 @@ h6 {
 .review-date {
     font-family: var(--font-family);
     font-weight: 300;
-    font-size: 18px;
+    font-size: clamp(0.75rem, 0.2537rem + 1.0327vw, 1.125rem);
     line-height: 1.5;
     color: #909090;
     position: absolute;
