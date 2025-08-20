@@ -370,10 +370,30 @@
         padding: 10px 37px;
     }
 
+    .divider {
+        margin: 20px;
+    }
+
     .review__user-text {
         width: 80%;
     }
 
+    .review__show-more {
+        left: 35%;
+    }
+    /* -------------АККОРДЕОН---------------- */
+    .accordion__title {
+        padding-bottom: 40px;
+    }
+
+    .accordion__header {
+        padding: 18px 0;
+    }
+
+    .accordion__content-inner {
+        padding: 0 0 30px;
+        width: 85%;
+    }
 }
 
 @media (max-width: 680px) {
@@ -469,6 +489,9 @@
         margin: 20px 0;
     }
 
+    .review__show-more {
+        left: 31%;
+    }
 
     /* --------------FOOTER-------------------- */
     .footer__col-grid {
@@ -572,5 +595,9 @@
 
     .review__user-photo img {
         width: 80px;
+    }
+
+    .review__show-more {
+        left: 25%;
     }
 }

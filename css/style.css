@@ -677,6 +677,7 @@ h6 {
     height: clamp(2.25rem, 1.5239rem + 2.9787vw, 4rem);
     background: transparent;
     flex-shrink: 0;
+    transition: ease 0.3s;
 }
 
 .category__prev svg,
@@ -688,11 +689,13 @@ h6 {
 .category__prev:hover,
 .category__next:hover {
     border-color: #c5358c;
+    transform: translateY(-5px);
 }
 
 .category__prev:hover svg path,
 .category__next:hover svg path {
     fill: #c5358c;
+
 }
 
 .category__pagination {
@@ -723,7 +726,6 @@ h6 {
     gap: 70px;
 }
 
-.review__rating-info {}
 
 .review__score {
     font-family: var(--font-family);
@@ -750,6 +752,11 @@ h6 {
     font-weight: 400;
     font-size: clamp(1rem, 0.3402rem + 1.3746vw, 1.5rem);
     color: #111;
+    transition: ease 0.3s;
+}
+
+.review__write-review:hover {
+    transform: translateY(5px);
 }
 
 .divider {
@@ -831,16 +838,142 @@ h6 {
 .review__show-more {
     display: flex;
     align-items: center;
+    gap: clamp(14px, calc(14px + 16 * (100vw - 768px) / 562), 30px);
     position: relative;
-    left: 39%;
-    gap: 30px;
-    padding: 17px 39px 17px 49px;
+    left: 37%;
+    padding:
+        clamp(10px, calc(10px + 7 * (100vw - 769px)/581), 17px) clamp(16px, calc(16px + 23 * (100vw - 769px)/581), 39px) clamp(10px, calc(10px + 7 * (100vw - 769px)/581), 17px) clamp(20px, calc(20px + 29 * (100vw - 769px)/581), 49px);
     font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 24px;
-    color: #111;
+    font-size: clamp(1rem, 0.3402rem + 1.3746vw, 1.5rem);
     background: none;
     border: 1px solid #111;
     border-radius: 3px;
     margin-top: 80px;
+    transition: ease 0.3s;
+}
+
+.review__show-more:hover {
+    transform: translateY(5px);
+}
+
+.review__show-more img {
+    width: clamp(1rem, 0.2577rem + 1.5464vw, 1.5625rem);
+}
+
+/* --------------------------АККОРДЕОН-------------------------------- */
+
+.main__accordion {
+    padding: clamp(60px, 9.8vw, 150px) 0;
+    background: #f8f8f8;
+}
+
+.accordion__title {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: clamp(1.25rem, 0.6914rem + 2.2917vw, 2.625rem);
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.accordion__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+.accordion {
+    list-style: none;
+    position: relative;
+}
+
+.accordion__item {
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.accordion__item:last-child {
+    border-bottom: none;
+}
+
+.accordion__header {
+    width: 100%;
+    text-align: left;
+    padding: 34px 0;
+    background: #f8f8f8;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(0.8125rem, 0.6348rem + 0.7292vw, 1.25rem);
+    line-height: 150%;
+    cursor: pointer;
+}
+
+
+.accordion__icon {
+    position: relative;
+    width: clamp(1.625rem, 1.3711rem + 1.0417vw, 2.25rem);
+    height: clamp(1.625rem, 1.3711rem + 1.0417vw, 2.25rem);
+    flex-shrink: 0;
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+}
+
+.accordion__icon::before,
+.accordion__icon::after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    transition: all 0.3s ease;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.accordion__icon::before {
+    transform: translateY(-50%);
+}
+
+.accordion__icon::after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.accordion__header.active .accordion__icon::before {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.accordion__header.active .accordion__icon::after {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion__content-inner {
+    padding: 0 0 50px;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: clamp(0.75rem, 0.5977rem + 0.625vw, 1.125rem);
+    line-height: 150%;
+    width: 68%;
+}
+
+.accordion::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
 }
