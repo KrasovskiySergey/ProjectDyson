@@ -34,9 +34,6 @@
 }
 
 @media (max-width: 1250px) {
-    /* .container {
-        padding: 0 30px;
-    } */
 
     .nav__list {
         font-size: 15px;
@@ -378,7 +375,7 @@
         width: 80%;
     }
 
-    .review__show-more {
+    .show-more {
         left: 35%;
     }
     /* -------------АККОРДЕОН---------------- */
@@ -394,6 +391,25 @@
         padding: 0 0 30px;
         width: 85%;
     }
+    /* -------------НОВОСТИ------------------- */
+    .news__title {
+        margin-bottom: 30px;
+    }
+    .news__content {
+        gap: 10px;
+    }
+    .news__show-more {
+        margin-top: 40px;
+    }
+
+    /* ----------ФОРМА-------------- */
+
+    .form__connection {
+        width: 40%;
+    }
+    .form__subscription {
+        width: 52%;
+    }
 }
 
 @media (max-width: 680px) {
@@ -405,7 +421,9 @@
         padding: 30px 0;
     }
 
-
+    .checkbox-container {
+        gap: 10px;
+    }
 }
 
 @media (max-width: 580px) {
@@ -471,6 +489,7 @@
         grid-template-columns: repeat(2, minmax(120px, 1fr));
     }
 
+
     /* -----------------ОТЗЫВЫ----------------------- */
     .review__rating {
         justify-content: space-between;
@@ -489,8 +508,32 @@
         margin: 20px 0;
     }
 
-    .review__show-more {
+    .show-more {
         left: 31%;
+    }
+
+    /* ----------------НОВОСТИ----------------- */
+
+    .news__content-none {
+        display: none;
+    }
+
+    /* --------------ФОРМА---------------------- */
+
+    .form__inner {
+        flex-direction: column;
+        width: 70%;
+    }
+    .form__connection {
+        width: auto;
+        margin-bottom: 45px;
+    }
+    .form__subscription {
+        width: auto;
+    }
+    .checkbox-container input {
+        transform: none;
+        width: 30px;
     }
 
     /* --------------FOOTER-------------------- */
@@ -597,7 +640,18 @@
         width: 80px;
     }
 
-    .review__show-more {
+    .show-more {
         left: 25%;
+    }
+
+    /* --------------НОВОСТИ----------------- */
+    .news__inner {
+        gap: 10px;
+    }
+
+    /* ------------ФОРМА-------------- */
+    .form__inner {
+        flex-direction: column;
+        width: 100%;
     }
 }

@@ -31,6 +31,12 @@
     transition: all .3s;
 }
 
+.burger:hover span,
+.burger:hover span::before,
+.burger:hover span::after {
+    background: #c5358c;
+}
+
 
 .burger span {
     position: relative;
